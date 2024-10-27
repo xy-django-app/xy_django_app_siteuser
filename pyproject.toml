@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+
+requires-python = ">=3.11.3"
+
+name = "xy_django_app_siteuser"
+
+authors = [{ name = "helios", email = "yuyang.0515@qq.com" }]
+description = "用户数据模型"
+
+dynamic = ["version", "readme"]
+
+classifiers = ["Programming Language :: Python :: 3.11.3"]
+
+dependencies = [
+    "pytz",
+    "django",
+    "djangorestframework",
+    "xy_type",
+    "xy_string",
+    "xy_django_model",
+    "xy_admin_model_serializer",
+    "xy_django_app_information",
+]
+
+[project.scripts]
+
+[tool.setuptools.packages.find]
+where = ["./"]
+include = [
+    "xy_django_app_siteuser",
+] # alternatively: `exclude = ["additional*"]`
+namespaces = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+readme = { file = ["README.rst", "USAGE.rst", "README.md", "USAGE.md"] }
