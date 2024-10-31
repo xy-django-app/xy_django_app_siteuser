@@ -1,12 +1,12 @@
 # -*- coding: UTF-8 -*-
-__author__ = "helios"
+__author__ = "余洋"
 __doc__ = "abstracts"
 """
   * @File    :   abstracts.py
   * @Time    :   2023/05/04 11:53:28
   * @Author  :   余洋
   * @Version :   1.0
-  * @Contact :   yuyang.0515@qq.com
+  * @Contact :   yuyangit.0515@qq.com
   * @License :   (C)Copyright 2019-2023, 希洋 (Ship of Ocean)
   * @Desc    :   None
 """
@@ -53,7 +53,7 @@ class MAEmailCredential(models.Model):
         verbose_name_plural = _("邮箱凭证")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.email_address)
+        return f"{self.id}. {self.email_address}"
 
 
 class MACaptcha(models.Model):
@@ -187,7 +187,7 @@ class MACaptcha(models.Model):
         verbose_name_plural = _("验证码")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.code)
+        return f"{self.id}. {self.code}"
 
 
 class MASMSCaptchaCredential(models.Model):
@@ -239,7 +239,7 @@ class MASMSCaptchaCredential(models.Model):
         verbose_name_plural = _("短信凭证")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.name)
+        return f"{self.id}. {self.name}"
 
 
 @gen_upload_to
@@ -385,7 +385,7 @@ class MASiteUser(models.Model):
                 protocol = "http"
             if hasattr(settings, "PROTOCOL"):
                 protocol = settings.PROTOCOL
-            return protocol + "://" + str(settings.DOMAIN) + str(self.thumb.url)
+            return f"{protocol}://{settings.DOMAIN}{self.thumb.url}"
         return None
 
     @classmethod
@@ -467,7 +467,7 @@ class MASiteUser(models.Model):
         verbose_name_plural = _("站点用户")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.username)
+        return f"{self.id}. {self.username}"
 
 
 class MAAuthUserCredential(models.Model):
@@ -516,7 +516,7 @@ class MAAuthUserCredential(models.Model):
         verbose_name_plural = _("授权用户凭证")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.platform)
+        return f"{self.id}. {self.platform}"
 
 
 class MAAuthUser(MASiteUser):
@@ -565,4 +565,4 @@ class MAAuthUser(MASiteUser):
         verbose_name_plural = _("第三方平台用户")
 
     def __str__(self):
-        return str(self.id) + ". " + str(self.identifier)
+        return f"{self.id}. {self.identifier}"

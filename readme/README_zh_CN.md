@@ -8,9 +8,9 @@
 -->
 # xy_django_app_siteuser
 
-- [简体中文](readme/README_zh_CN.md)
-- [繁体中文](readme/README_zh_TW.md)
-- [English](readme/README_en.md)
+- [简体中文](README_zh_CN.md)
+- [繁体中文](README_zh_TW.md)
+- [English](README_en.md)
 
 ## 说明
 
@@ -31,7 +31,7 @@ pip install xy_django_app_siteuser
 ## 使用
 
 #### 1. 创建SiteUser模块
-> 操作 [样例工程](./samples/xy_web_server_demo/)
+> 操作 [样例工程](../samples/xy_web_server_demo/)
 
 ```bash
 # bash
@@ -39,7 +39,7 @@ xy_web_server -w django startapp SiteUser
 # SiteUser 模块创建在 source/Runner/Admin/SiteUser 
 ```
 
-#### 2. 在样例工程中的[settings.py](./samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)设置如下
+#### 2. 在样例工程中的[settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)设置如下
 
 ```python
 # settings.py
@@ -60,7 +60,7 @@ INSTALLED_APPS = [
 
 ```
 
-#### 3. 在[SiteUser](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[models.py](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)文件中加入如下代码
+#### 3. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)文件中加入如下代码
 
 ```python
 # models.py
@@ -173,7 +173,7 @@ class MAuthUser(MAAuthUser):
 
 ```
 
-#### 4. 在[SiteUser](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
+#### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
 
 ```python
 # admin.py
@@ -239,7 +239,7 @@ xy_web_server -w django start
 # 启动工程后访问 http://127.0.0.1:8401/admin 验证站点用户管理系统
 ```
 
-##### 运行 [样例工程](./samples/xy_web_server_demo)
+##### 运行 [样例工程](../samples/xy_web_server_demo)
 
 > 样例工程具体使用方式请移步 <b style="color: blue">xy_web_server.git</b> 下列仓库
 > - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github地址</a>  
@@ -247,12 +247,12 @@ xy_web_server -w django start
 
 
 ## 许可证
-xy_django_app_siteuser 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
+xy_django_app_siteuser 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](../LICENSE) 文件。
 
 ## 捐赠
 如果小伙伴们觉得这些工具还不错的话，能否请咱喝一杯咖啡呢?  
 
-![Pay-Total](./readme/Pay-Total.png)
+![Pay-Total](./Pay-Total.png)
 
 
 ## 联系方式

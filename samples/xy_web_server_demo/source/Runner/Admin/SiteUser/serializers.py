@@ -3,13 +3,14 @@ __author__ = "余洋"
 __doc__ = "serializers"
 """
   * @File    :   serializers.py
-  * @Time    :   2023/05/04 14:33:41
+  * @Time    :   2024/10/31 21:10:10
   * @Author  :   余洋
-  * @Version :   1.0
+  * @Version :   0.0.1
   * @Contact :   yuyangit.0515@qq.com
-  * @License :   (C)Copyright 2019-2023, 希洋 (Ship of Ocean)
-  * @Desc    :   None
+  * @License :   (C)Copyright 2019-2024, 希洋 (Ship of Ocean)
+  * @Desc    :   
 """
+
 
 from .models import (
     MSiteUser,

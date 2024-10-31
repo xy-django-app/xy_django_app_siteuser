@@ -1,45 +1,45 @@
 <!--
  * @Author: 余洋 yuyangit.0515@qq.com
- * @Date: 2024-10-18 13:02:23
+ * @Date: 2024-10-18 13:02:22
  * @LastEditors: 余洋 yuyangit.0515@qq.com
- * @LastEditTime: 2024-10-23 20:51:38
- * @FilePath: /xy_django_app_siteuser/README.md
+ * @LastEditTime: 2024-10-23 20:52:22
+ * @FilePath: /xy_django_app_siteuser/readme/README_en.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 # xy_django_app_siteuser
 
-- [简体中文](readme/README_zh_CN.md)
-- [繁体中文](readme/README_zh_TW.md)
-- [English](readme/README_en.md)
+- [简体中文](README_zh_CN.md)
+- [繁体中文](README_zh_TW.md)
+- [English](README_en.md)
 
-## 说明
+## Description
 
-站点用户数据模型.
+Common SiteUser data model.
 
-## 源码仓库
+## Source Code Repositories
 
-- <a href="https://github.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Github地址</a>  
-- <a href="https://gitee.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Gitee地址</a>
+- <a href="https://github.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Github</a>  
+- <a href="https://gitee.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Gitee</a>
 
-## 安装
+## Installation
 
 ```bash
 # bash
 pip install xy_django_app_siteuser
 ```
 
-## 使用
+## How to use
 
-#### 1. 创建SiteUser模块
-> 操作 [样例工程](./samples/xy_web_server_demo/)
+#### 1. Create the SiteUser module
+> Operation [Sample Project](../samples/xy_web_server_demo/)
 
 ```bash
 # bash
 xy_web_server -w django startapp SiteUser
-# SiteUser 模块创建在 source/Runner/Admin/SiteUser 
+# SiteUser Module created in source/Runner/Admin/SiteUser 
 ```
 
-#### 2. 在样例工程中的[settings.py](./samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)设置如下
+#### 2. The [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py) in the sample project are as follows
 
 ```python
 # settings.py
@@ -60,7 +60,7 @@ INSTALLED_APPS = [
 
 ```
 
-#### 3. 在[SiteUser](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[models.py](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)文件中加入如下代码
+#### 3. Add the following code to the [models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py) file of the [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
 
 ```python
 # models.py
@@ -170,13 +170,13 @@ class MAuthUser(MAAuthUser):
         verbose_name = _("授权用户凭证")
         verbose_name_plural = _("授权用户凭证")
 
-
 ```
 
-#### 4. 在[SiteUser](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](./samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
+#### 4. Add the following code to the[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py) file of the [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
 
 ```python
 # admin.py
+
 from django.contrib import admin
 from .models import (
     MAuthUser,
@@ -232,32 +232,32 @@ class AuthUser(admin.ModelAdmin):
 
 ```
 
-#### 5. 运行项目
+#### 5. Run the project
 
 ```bash
 xy_web_server -w django start
-# 启动工程后访问 http://127.0.0.1:8401/admin 验证站点用户管理系统
+# After starting the project, visit http://127.0.0.1:8401/admin to verify the SiteUser management system
 ```
 
-##### 运行 [样例工程](./samples/xy_web_server_demo)
+##### Run [Sample Project](../samples/xy_web_server_demo)
 
-> 样例工程具体使用方式请移步 <b style="color: blue">xy_web_server.git</b> 下列仓库
-> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github地址</a>  
-> - <a href="https://gitee.com/xy-web-service/xy_web_server.git" target="_blank">Gitee地址</a>
+> For detailed usage of the sample project, please go to the following repository <b style="color: blue">xy_web_server.git</b> 
+> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github</a>  
+> - <a href="https://gitee.com/xy-web-service/xy_web_server.git" target="_blank">Gitee</a>
+
+## License
+xy_django_app_siteuser is licensed under the <Mulan Permissive Software License，Version 2>. See the [LICENSE](../LICENSE) file for more info.
+
+## Donate
+
+If you think these tools are pretty good, Can you please have a cup of coffee?  
+
+![Pay-Total](./Pay-Total.png)  
 
 
-## 许可证
-xy_django_app_siteuser 根据 <木兰宽松许可证, 第2版> 获得许可。有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
-
-## 捐赠
-如果小伙伴们觉得这些工具还不错的话，能否请咱喝一杯咖啡呢?  
-
-![Pay-Total](./readme/Pay-Total.png)
-
-
-## 联系方式
+## Contact
 
 ```
-微信: yuyangiit
-邮箱: yuyangit.0515@qq.com
+WeChat: yuyangiit
+Mail: yuyangit.0515@qq.com
 ```
