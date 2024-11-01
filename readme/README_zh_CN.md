@@ -14,7 +14,7 @@
 
 ## 说明
 
-站点用户数据模型.
+通用站点用户数据模型.
 
 ## 源码仓库
 
@@ -30,7 +30,41 @@ pip install xy_django_app_siteuser
 
 ## 使用
 
-#### 1. 创建SiteUser模块
+
+##### 1. 直接引入
+
+- ###### 1. 设置全局配置
+
+在Django项目中的settings.py文件中加入如下配置
+例如: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
+
+```python
+# settings.py
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "xy_django_app_siteuser",
+    "Demo",
+    "Media",
+]
+```
+
+- ###### 2. 运行项目
+
+```bash
+xy_web_server -w django start
+# 启动工程后访问 http://127.0.0.1:8401/admin 验证站点管理系统
+```
+
+##### 2. 自定义
+
+- ###### 1. 创建SiteUser模块
+
 > 操作 [样例工程](../samples/xy_web_server_demo/)
 
 ```bash
@@ -39,7 +73,10 @@ xy_web_server -w django startapp SiteUser
 # SiteUser 模块创建在 source/Runner/Admin/SiteUser 
 ```
 
-#### 2. 在样例工程中的[settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)设置如下
+- ###### 2. 设置全局配置
+
+在Django项目中的settings.py文件中加入如下配置
+例如: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
 
 ```python
 # settings.py
@@ -52,15 +89,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Demo",
-    "Resource",
     "Media",
-    "Information",
     "SiteUser",
 ]
 
 ```
 
-#### 3. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)文件中加入如下代码
+- ###### 3. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)文件中加入如下代码
 
 ```python
 # models.py
@@ -173,7 +208,7 @@ class MAuthUser(MAAuthUser):
 
 ```
 
-#### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
+- ###### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
 
 ```python
 # admin.py
@@ -232,14 +267,14 @@ class AuthUser(admin.ModelAdmin):
 
 ```
 
-#### 5. 运行项目
+- ###### 5. 运行项目
 
 ```bash
 xy_web_server -w django start
 # 启动工程后访问 http://127.0.0.1:8401/admin 验证站点用户管理系统
 ```
 
-##### 运行 [样例工程](../samples/xy_web_server_demo)
+##### 运行 [样例工程](.../samples/xy_web_server_demo)
 
 > 样例工程具体使用方式请移步 <b style="color: blue">xy_web_server.git</b> 下列仓库
 > - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github地址</a>  

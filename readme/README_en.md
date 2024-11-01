@@ -30,16 +30,52 @@ pip install xy_django_app_siteuser
 
 ## How to use
 
-#### 1. Create the SiteUser module
+##### 1. Direct import
+
+- ###### 1. Setting global configuration
+
+Add the following configuration to the settings.py file in the Django project  
+For example: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
+
+```python
+# settings.py
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "xy_django_app_siteuser",
+    "Demo",
+    "Media",
+]
+```
+
+- ###### 2. Run the project
+
+```bash
+xy_web_server -w django start
+# 启动工程后访问 http://127.0.0.1:8401/admin 验证站点管理系统
+```
+
+##### 2. Custom
+
+- ###### 1. Create SiteUser Module
+
 > Operation [Sample Project](../samples/xy_web_server_demo/)
 
 ```bash
 # bash
 xy_web_server -w django startapp SiteUser
-# SiteUser Module created in source/Runner/Admin/SiteUser 
+# SiteUser 模块创建在 source/Runner/Admin/SiteUser 
 ```
 
-#### 2. The [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py) in the sample project are as follows
+- ###### 2. Setting global configuration
+
+Add the following configuration to the settings.py file in the Django project  
+For example: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
 
 ```python
 # settings.py
@@ -52,15 +88,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Demo",
-    "Resource",
     "Media",
-    "Information",
     "SiteUser",
 ]
 
 ```
 
-#### 3. Add the following code to the [models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py) file of the [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
+- ###### 3. Add the following code to the [models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py) file of the  [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
 
 ```python
 # models.py
@@ -170,13 +204,13 @@ class MAuthUser(MAAuthUser):
         verbose_name = _("授权用户凭证")
         verbose_name_plural = _("授权用户凭证")
 
+
 ```
 
-#### 4. Add the following code to the[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py) file of the [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
+- ###### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
 
 ```python
 # admin.py
-
 from django.contrib import admin
 from .models import (
     MAuthUser,
@@ -232,11 +266,11 @@ class AuthUser(admin.ModelAdmin):
 
 ```
 
-#### 5. Run the project
+- ###### 5. Run the project
 
 ```bash
 xy_web_server -w django start
-# After starting the project, visit http://127.0.0.1:8401/admin to verify the SiteUser management system
+# 启动工程后访问 http://127.0.0.1:8401/admin 验证站点用户管理系统
 ```
 
 ##### Run [Sample Project](../samples/xy_web_server_demo)

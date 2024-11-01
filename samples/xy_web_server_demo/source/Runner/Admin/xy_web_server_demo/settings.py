@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "Resource",
     "Media",
     "Information",
+    # "xy_django_app_siteuser",
     "SiteUser",
 ]
 
