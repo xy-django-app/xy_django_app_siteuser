@@ -16,16 +16,22 @@ from .abstracts import (
 class MEmailCredential(MAEmailCredential):
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("邮箱凭证")
+        verbose_name_plural = _("邮箱凭证")
 
 
 class MCaptcha(MACaptcha):
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("验证码")
+        verbose_name_plural = _("验证码")
 
 
 class MSMSCaptchaCredential(MASMSCaptchaCredential):
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("短信凭证")
+        verbose_name_plural = _("短信凭证")
 
 
 class MEmailCaptcha(MACaptcha):
@@ -40,6 +46,8 @@ class MEmailCaptcha(MACaptcha):
 
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("邮箱验证码")
+        verbose_name_plural = _("邮箱验证码")
 
     def __str__(self):
         return str(self.id) + ". " + str(self.code)
@@ -53,6 +61,8 @@ class MSMSCaptcha(MACaptcha):
 
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("短信验证码")
+        verbose_name_plural = _("短信验证码")
 
     def __str__(self):
         return str(self.id) + ". " + str(self.code)
@@ -70,11 +80,15 @@ class MSiteUser(MASiteUser):
 
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("站点用户")
+        verbose_name_plural = _("站点用户")
 
 
 class MAuthUserCredential(MAAuthUserCredential):
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("授权用户凭证")
+        verbose_name_plural = _("授权用户凭证")
 
 
 class MAuthUser(MAAuthUser):
@@ -89,3 +103,5 @@ class MAuthUser(MAAuthUser):
 
     class Meta:
         app_label = "xy_django_app_siteuser"
+        verbose_name = _("第三方平台用户")
+        verbose_name_plural = _("第三方平台用户")
