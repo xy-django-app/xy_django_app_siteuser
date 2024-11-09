@@ -2,41 +2,42 @@
  * @Author: 余洋 yuyangit.0515@qq.com
  * @Date: 2024-10-18 13:02:22
  * @LastEditors: 余洋 yuyangit.0515@qq.com
- * @LastEditTime: 2024-10-23 20:52:22
- * @FilePath: /xy_django_app_siteuser/readme/README_en.md
+ * @LastEditTime: 2024-10-23 20:51:56
+ * @FilePath: /xy_django_app_siteuser/readme/README.zh-hant.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 # xy_django_app_siteuser
 
-- [简体中文](README_zh_CN.md)
-- [繁体中文](README_zh_TW.md)
-- [English](README_en.md)
+- [简体中文](../README.md)
+- [繁體中文](README.zh-hant.md)
+- [English](README.en.md)
 
-## Description
+## 說明
 
-Common SiteUser data model.
+通用站點用戶資料模型.
 
-## Source Code Repositories
+## 程式碼庫
 
-- <a href="https://github.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Github</a>  
-- <a href="https://gitee.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">Gitee</a>  
-- <a href="https://gitcode.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">GitCode</a>  
+- <a href="https://github.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Github位址</a>  
+- <a href="https://gitee.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">Gitee位址</a>  
+- <a href="https://gitcode.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">GitCode位址</a>  
 
-## Installation
+## 安裝
 
 ```bash
 # bash
 pip install xy_django_app_siteuser
 ```
 
-## How to use
+## 使用
 
-##### 1. Direct import
 
-- ###### 1. Setting global configuration
+##### 1. 直接引入
 
-Add the following configuration to the settings.py file in the Django project  
-For example: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
+- ###### 1. 設定全域配置
+
+在Django專案中的settings.py檔案中加入如下配置
+例如: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
 
 ```python
 # settings.py
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-- ###### 2. Run the project
+- ###### 2. 運行專案
 
 ```bash
 xy_web_server -w django makemigrations
@@ -65,11 +66,11 @@ xy_web_server -w django start
 # 启动工程后访问 http://127.0.0.1:8401/admin 验证站点管理系统
 ```
 
-##### 2. Custom
+##### 2. 自訂
 
-- ###### 1. Create SiteUser Module
+- ###### 1. 建立SiteUser模組
 
-> Operation [Sample Project](../samples/xy_web_server_demo/)
+> 操作 [範例工程](../samples/xy_web_server_demo/)
 
 ```bash
 # bash
@@ -77,10 +78,10 @@ xy_web_server -w django startapp SiteUser
 # SiteUser 模块创建在 source/Runner/Admin/SiteUser 
 ```
 
-- ###### 2. Setting global configuration
+- ###### 2. 設定全域配置
 
-Add the following configuration to the settings.py file in the Django project  
-For example: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
+在Django專案中的settings.py檔案中加入如下配置
+例如: [settings.py](../samples/xy_web_server_demo/source/Runner/Admin/xy_web_server_demo/settings.py)
 
 ```python
 # settings.py
@@ -99,7 +100,7 @@ INSTALLED_APPS = [
 
 ```
 
-- ###### 3. Add the following code to the [models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py) file of the  [SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser) module
+- ###### 3. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模組的[models.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/models.py)檔中加入如下程式碼
 
 ```python
 # models.py
@@ -212,7 +213,7 @@ class MAuthUser(MAAuthUser):
 
 ```
 
-- ###### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模块的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)文件中加入如下代码
+- ###### 4. 在[SiteUser](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser)模組的[admin.py](../samples/xy_web_server_demo/source/Runner/Admin/SiteUser/admin.py)檔中加入如下程式碼
 
 ```python
 # admin.py
@@ -271,7 +272,7 @@ class AuthUser(admin.ModelAdmin):
 
 ```
 
-- ###### 5. Run the project
+- ###### 5. 運行專案
 
 ```bash
 xy_web_server -w django makemigrations
@@ -282,26 +283,25 @@ xy_web_server -w django start
 # 启动工程后访问 http://127.0.0.1:8401/admin 验证站点用户管理系统
 ```
 
-##### Run [Sample Project](../samples/xy_web_server_demo)
+##### 運轉 [範例工程](../samples/xy_web_server_demo)
 
-> For detailed usage of the sample project, please go to the following repository <b style="color: blue">xy_web_server.git</b> 
-> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github</a>  
-> - <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee</a>  
-> - <a href="https://gitcode.com/xy-opensource/xy_web_srever.git" target="_blank">GitCode</a>  
+> 範例工程具體使用方式請移步 <b style="color: blue">xy_web_server.git</b> 下列倉庫
+> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github位址</a>  
+> - <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee位址</a>  
+> - <a href="https://gitcode.com/xy-opensource/xy_web_server.git" target="_blank">GitCode位址</a>  
 
-## License
-xy_django_app_siteuser is licensed under the <Mulan Permissive Software License，Version 2>. See the [LICENSE](../LICENSE) file for more info.
+## 許可證
+xy_django_app_siteuser 根據 <木蘭寬鬆許可證, 第2版> 獲得許可。有關詳細信息，請參閱 [LICENSE](../LICENSE) 文件。
 
-## Donate
+## 捐贈
 
-If you think these tools are pretty good, Can you please have a cup of coffee?  
+如果小夥伴們覺得這些工具還不錯的話，能否請咱喝一杯咖啡呢?  
 
-![Pay-Total](./Pay-Total.png)  
+![Pay-Total](./Pay-Total.png)
 
-
-## Contact
+## 聯繫方式
 
 ```
-WeChat: yuyangiit
-Mail: yuyangit.0515@qq.com
+微信: yuyangiit
+郵箱: yuyangit.0515@qq.com
 ```
