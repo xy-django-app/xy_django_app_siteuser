@@ -8,9 +8,8 @@
 -->
 # xy_django_app_siteuser
 
-- [简体中文](../README.md)
-- [繁體中文](README.zh-hant.md)
-- [English](README.en.md)
+| [简体中文](../README.md)         | [繁體中文](./README.zh-hant.md)        |                      [English](./README.en.md)          |
+| ----------- | -------------|---------------------------------------|
 
 ## 說明
 
@@ -18,9 +17,9 @@
 
 ## 程式碼庫
 
-- <a href="https://github.com/xy-django-app/xy_django_app_siteuser.git" target="_blank">Github位址</a>  
-- <a href="https://gitee.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">Gitee位址</a>  
-- <a href="https://gitcode.com/xy-opensource/xy_django_app_siteuser.git" target="_blank">GitCode位址</a>  
+| [Github](https://github.com/xy-django-app/xy_django_app_siteuser.git)         | [Gitee](https://gitee.com/xy-opensource/xy_django_app_siteuser.git)        |                      [GitCode](https://gitcode.com/xy-opensource/xy_django_app_siteuser.git)          |
+| ----------- | -------------|---------------------------------------|
+
 
 ## 安裝
 
@@ -286,9 +285,9 @@ xy_web_server -w django start
 ##### 運轉 [範例工程](../samples/xy_web_server_demo)
 
 > 範例工程具體使用方式請移步 <b style="color: blue">xy_web_server.git</b> 下列倉庫
-> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github位址</a>  
-> - <a href="https://gitee.com/xy-opensource/xy_web_server.git" target="_blank">Gitee位址</a>  
-> - <a href="https://gitcode.com/xy-opensource/xy_web_server.git" target="_blank">GitCode位址</a>  
+
+| [Github](https://github.com/xy-web-service/xy_web_server.git)         | [Gitee](https://gitee.com/xy-opensource/xy_web_server.git)        |                      [GitCode](https://gitcode.com/xy-opensource/xy_web_server.git)          |
+| ----------- | -------------|---------------------------------------|
 
 ## 許可證
 xy_django_app_siteuser 根據 <木蘭寬鬆許可證, 第2版> 獲得許可。有關詳細信息，請參閱 [LICENSE](../LICENSE) 文件。
